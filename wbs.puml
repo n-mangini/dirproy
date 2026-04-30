@@ -1,0 +1,52 @@
+@startwbs
+* SplitIt
+** 1. Gestión del Proyecto
+*** 1.1 Project Charter aprobado
+*** 1.2 Planificación y seguimiento del proyecto ejecutados
+*** 1.3 Control de alcance, tiempos y costos realizado
+*** 1.4 Gestión de riesgos implementada
+
+** 2. Diseño del Producto
+*** 2.1 Prototipo UX/UI navegable validado (Figma)
+*** 2.2 Flujos de usuario definidos y validados
+*** 2.3 Sistema de diseño definido
+
+** 3. Setup y Capacitación
+*** 3.1 Entorno de desarrollo configurado
+*** 3.2 Arquitectura del sistema definida
+*** 3.3 Modelo de datos definido
+*** 3.4 Infraestructura cloud configurada
+*** 3.5 Equipo capacitado en tecnologías necesarias
+
+** 4. Acceso y Onboarding
+*** 4.1 Funcionalidad de acceso sin registro implementada
+*** 4.2 Sistema de generación de enlaces de invitación implementado
+*** 4.3 Interfaz de ingreso de usuarios implementada
+
+** 5. Gestión de Eventos
+*** 5.1 Funcionalidad de creación de eventos implementada
+*** 5.2 Funcionalidad de edición de eventos implementada
+*** 5.3 Gestión de participantes implementada
+
+** 6. Gestión de Gastos y Lógica de División
+*** 6.1 Funcionalidad de registro de gastos implementada
+*** 6.2 Funcionalidad de división de gastos implementada
+*** 6.3 Funcionalidad de cálculo y optimización de deudas implementada
+*** 6.4 Funcionalidad de conversión de moneda implementada
+
+** 7. Visualización de Balances
+*** 7.1 Visualización de balances entre usuarios implementada
+*** 7.2 Historial de transacciones implementado
+
+** 8. Testing y Aseguramiento de Calidad
+*** 8.1 Pruebas funcionales ejecutadas
+*** 8.2 Pruebas de usabilidad ejecutadas
+*** 8.3 Corrección de errores críticos realizada
+*** 8.4 Validación contra KPIs de usuario realizada
+
+** 9. Deploy y Cierre del Proyecto
+*** 9.1 Aplicación desplegada en entorno productivo
+*** 9.2 Documentación técnica entregada
+*** 9.3 Manual de usuario entregado
+*** 9.4 Entrega final del proyecto realizada
+@endwbs
