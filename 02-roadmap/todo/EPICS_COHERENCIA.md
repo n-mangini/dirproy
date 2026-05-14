@@ -1,18 +1,18 @@
 # Informe de coherencia entre épicas
 
-Fecha: 2026-04-30
+Fecha: 2026-05-07
 
 ## Conclusión general
 
-Las épicas son mayormente coherentes y cubren dominios separados: acceso registrado, acceso invitado, gestión de eventos, gestión de gastos, cálculo de balances, visualización de cuentas y multi-moneda.
+Las épicas son mayormente coherentes y cubren dominios separados: acceso registrado, acceso sin registro, gestión de eventos, gestión de gastos, cálculo de balances, visualización de cuentas y multi-moneda.
 
-No hay contradicciones graves, pero sí existen algunos bordes de responsabilidad que conviene ajustar para evitar solapamientos durante la implementación.
+Se corrigió la contradicción principal entre la visión del producto y el roadmap: cada evento tiene un owner registrado y la creación de eventos requiere una cuenta. El acceso sin registro queda definido para personas invitadas que ingresan mediante enlace compartido.
 
 ## Solapamientos principales
 
-- **SPLT-01 Gestión de Eventos** y **SPLT-02 Acceso con Registro**: ambas hablan de creación y asociación de eventos. Conviene dejar en SPLT-02 solo autenticación, sesión e identificación de usuario, y en SPLT-01 la creación, ownership y asociación del evento.
+- **SPLT-01 Gestión de Eventos** y **SPLT-02 Acceso con Registro**: SPLT-01 cubre la creación y administración del evento por parte del owner. SPLT-02 cubre autenticación, sesión e identificación de usuario, además de restringir la creación de eventos a usuarios autenticados.
 
-- **SPLT-01 Gestión de Eventos** y **SPLT-03 Acceso sin Registro**: ambas tocan alta de participantes. No es contradictorio, pero debería explicitarse que el owner puede precargar participantes y que el invitado puede autoagregarse mediante el enlace.
+- **SPLT-01 Gestión de Eventos** y **SPLT-03 Acceso sin Registro**: ambas tocan alta de participantes. No es contradictorio, pero debería explicitarse que el owner puede precargar participantes y que una persona invitada que entra por enlace puede autoagregarse.
 
 - **SPLT-04 Gestión de Gastos** y **SPLT-05 Cálculo de Balances**: ambas exigen actualización automática de balances. SPLT-04 debería limitarse a registrar cambios en gastos y disparar el evento de actualización; SPLT-05 debería ser dueña del cálculo y recálculo de balances.
 
@@ -22,7 +22,7 @@ No hay contradicciones graves, pero sí existen algunos bordes de responsabilida
 
 ## Gaps de coherencia
 
-- Falta definir permisos sobre gastos: quién puede editar o eliminar gastos, si cualquier invitado puede modificar gastos de otros y qué rol especial tiene el owner frente a los invitados.
+- Falta definir permisos sobre gastos: quién puede editar o eliminar gastos, si los invitados pueden modificar gastos de otros y qué rol especial tiene el owner frente a los invitados.
 
 - Falta definir identidad de participantes: nombres duplicados, cambio de participante en el mismo navegador, edición o eliminación de participantes y relación entre usuario registrado y participante.
 
@@ -30,15 +30,13 @@ No hay contradicciones graves, pero sí existen algunos bordes de responsabilida
 
 - En multi-moneda falta decidir cuándo se elige la moneda base del evento, qué pasa si falla la API de tipo de cambio y si las divisiones personalizadas se cargan en moneda original o en moneda base.
 
-- Hay un typo menor en `SPLT-02_ATDD.md`: "Accesso" debería ser "Acceso".
-
 ## Recomendaciones
 
-- Mantener SPLT-02 enfocada exclusivamente en autenticación, sesión e identidad de usuarios registrados.
+- Mantener SPLT-02 enfocada en autenticación, sesión, identidad de usuarios registrados y restricción de creación de eventos.
 
-- Mantener SPLT-01 como dueña del ciclo de vida del evento: creación, ownership, edición básica, enlace único y participantes precargados por el owner.
+- Mantener SPLT-01 como dueña del ciclo de vida del evento: creación por owner registrado, edición básica, enlace único y participantes precargados por el owner.
 
-- Definir explícitamente que SPLT-03 cubre el flujo de invitado: acceso por enlace, selección o alta de participante y persistencia local de identidad.
+- Definir explícitamente que SPLT-03 cubre el flujo de invitado por enlace: selección o alta de participante y persistencia local de identidad.
 
 - Separar responsabilidades entre SPLT-04 y SPLT-05: gastos registra datos económicos, balances calcula resultados derivados.
 
@@ -48,4 +46,4 @@ No hay contradicciones graves, pero sí existen algunos bordes de responsabilida
 
 ## Evaluación final
 
-La estructura actual es buena para un roadmap inicial. Las épicas no se pisan de forma bloqueante, pero necesitan límites más explícitos antes de convertirlas en historias o tareas técnicas. Los puntos más importantes a corregir son ownership de eventos, alta de participantes, recálculo de balances, visualización de deudas y alcance de multi-moneda.
+La estructura actual es buena para un roadmap inicial. Las épicas no se pisan de forma bloqueante, pero necesitan límites más explícitos antes de convertirlas en historias o tareas técnicas. Los puntos más importantes a debatir son permisos sobre eventos y gastos, alta de participantes, recálculo de balances, visualización de deudas y alcance de multi-moneda.

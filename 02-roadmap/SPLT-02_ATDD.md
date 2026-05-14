@@ -1,4 +1,4 @@
-## SPLT-02 Accesso con Registro
+## SPLT-02 Acceso con Registro
 Gestionar que una persona pueda registrarse e iniciar sesión en la plataforma.
 
 
@@ -11,6 +11,7 @@ La épica se considera **entregada y aceptada** cuando se cumplen los siguientes
 - [ ] **Persistencia de sesión:** Una persona autenticada puede mantener una sesión activa mientras usa la plataforma.
 - [ ] **Cierre de sesión:** Una persona puede cerrar sesión.
 - [ ] **Identificación de usuario:** La plataforma puede identificar de forma consistente al usuario autenticado.
+- [ ] **Creación autenticada:** Una persona autenticada puede crear eventos/splits asociados directamente a su cuenta.
 - [ ] **Restricción de creación:** Solo usuarios autenticados pueden crear nuevos eventos/splits.
 - [ ] **Asociación de eventos:** Los eventos creados por un usuario autenticado quedan asociados a su cuenta.
 

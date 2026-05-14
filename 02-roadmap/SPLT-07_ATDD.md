@@ -1,4 +1,4 @@
-## SPLT-07 Multi-moneda
+## SPLT-07 Soporte Multi-moneda
 
 Permite registrar gastos en distintas monedas y unificar su valor en una divisa base para el cálculo de balances.
 

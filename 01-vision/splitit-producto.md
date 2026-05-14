@@ -19,15 +19,15 @@ gestionarlos de forma simple y sin fricción desde el primer uso.​
 
 Al contrario de SplitWise​
 
-nuestro producto permite crear eventos para registrar y visualizar gastos sin
-necesidad de crear una cuenta ni descargar una app.​
+nuestro producto permite que las personas invitadas registren y visualicen gastos mediante un enlace compartido sin
+necesidad de crear una cuenta ni descargar una app, manteniendo un owner registrado para cada evento.​
 
 ---
 
 # Alcance del Producto
 
 Gestión de eventos
-- Creación de eventos con nombre y participantes. ​
+- Creación de eventos con nombre, participantes y owner registrado. ​
 - Generación de enlace único de acceso​
 - Acceso sin registro:​
 - Ingreso a eventos mediante enlace compartido​
